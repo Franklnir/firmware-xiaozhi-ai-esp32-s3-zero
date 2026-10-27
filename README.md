@@ -1,0 +1,1 @@
+# firmware-xiaozhi-ai-esp32-s3-zero
