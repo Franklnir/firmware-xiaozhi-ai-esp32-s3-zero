@@ -1,0 +1,35 @@
+{
+    "manufacturer": "waveshare",
+    "type": "esp32-s3-zero",
+    "target": "esp32s3",
+    "builds": [
+        {
+            "name": "esp32-s3-zero",
+            "sdkconfig_append": [
+                "CONFIG_SPIRAM_MODE_QUAD=y",
+                "CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y",
+                "CONFIG_PARTITION_TABLE_CUSTOM_FILENAME=\"partitions/v2/4m_s3.csv\"",
+                "CONFIG_BT_ENABLED=y",
+                "CONFIG_BT_BLUEDROID_ENABLED=y",
+                "CONFIG_BT_ALLOCATION_FROM_SPIRAM_FIRST=y",
+                "CONFIG_BT_BLE_DYNAMIC_ENV_MEMORY=y",
+                "CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y",
+                "CONFIG_BT_BLE_42_FEATURES_SUPPORTED=y",
+                "CONFIG_BT_BLE_50_FEATURES_SUPPORTED=n",
+                "CONFIG_BT_ACL_CONNECTIONS=2",
+                "CONFIG_BT_CTRL_BLE_MAX_ACT=3",
+                "CONFIG_LANGUAGE_EN_US=y"
+            ]
+        },
+        {
+            "name": "esp32-s3-zero-128x64",
+            "sdkconfig_append": [
+                "CONFIG_SPIRAM_MODE_QUAD=y",
+                "CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y",
+                "CONFIG_PARTITION_TABLE_CUSTOM_FILENAME=\"partitions/v2/4m.csv\"",
+                "CONFIG_ESP_VIDEO_USE_CUSTOMIZED_ESP_H264_VERSION=n",
+                "CONFIG_ESP32_S3_ZERO_DISPLAY_OLED_128X64=y"
+            ]
+        }
+    ]
+}
